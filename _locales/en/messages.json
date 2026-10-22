@@ -1,0 +1,333 @@
+{
+  "extName": {
+    "message": "TubeToMap"
+  },
+  "extDescription": {
+    "message": "Save the map links in a YouTube video's description to your Google Maps list in one go, and leave the video address in each note."
+  },
+  "titleJobRunning": {
+    "message": "Saving places"
+  },
+  "titleRefresh": {
+    "message": "Loading lists"
+  },
+  "titleCreate": {
+    "message": "Creating list"
+  },
+  "titleWorking": {
+    "message": "Working"
+  },
+  "titleSaved": {
+    "message": "$COUNT$ saved",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "stPending": {
+    "message": "Waiting"
+  },
+  "stWorking": {
+    "message": "Saving"
+  },
+  "stAdded": {
+    "message": "Added"
+  },
+  "stExists": {
+    "message": "Already there"
+  },
+  "stFailed": {
+    "message": "Failed"
+  },
+  "listLabel": {
+    "message": "List to save to"
+  },
+  "refreshLists": {
+    "message": "Reload lists"
+  },
+  "newListName": {
+    "message": "New list name"
+  },
+  "createBtn": {
+    "message": "Create"
+  },
+  "progressLabel": {
+    "message": "Save progress"
+  },
+  "selectAll": {
+    "message": "All places"
+  },
+  "selectPlaces": {
+    "message": "Select places"
+  },
+  "retryDefault": {
+    "message": "Retry"
+  },
+  "openInMaps": {
+    "message": "Open in Google Maps ↗"
+  },
+  "openResult": {
+    "message": "Check result in Maps ↗"
+  },
+  "copyDiag": {
+    "message": "Copy diagnostics"
+  },
+  "copied": {
+    "message": "Copied"
+  },
+  "copyFailed": {
+    "message": "Couldn't copy"
+  },
+  "openVideo": {
+    "message": "Open a YouTube video"
+  },
+  "readingVideo": {
+    "message": "Reading video…"
+  },
+  "noMapLinks": {
+    "message": "No map links in the description"
+  },
+  "videoReadFail": {
+    "message": "Couldn't read the video: $ERR$",
+    "placeholders": {
+      "err": {
+        "content": "$1"
+      }
+    }
+  },
+  "genericError": {
+    "message": "Error: $ERR$",
+    "placeholders": {
+      "err": {
+        "content": "$1"
+      }
+    }
+  },
+  "requestFail": {
+    "message": "Request failed: $ERR$",
+    "placeholders": {
+      "err": {
+        "content": "$1"
+      }
+    }
+  },
+  "mapsWindowNote": {
+    "message": "A Google Maps window opens briefly"
+  },
+  "uiChangedHint": {
+    "message": "Google Maps seems to have changed. Copy the diagnostics with the button below and report it as an issue."
+  },
+  "placesOne": {
+    "message": "1 place"
+  },
+  "placesMany": {
+    "message": "$COUNT$ places",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "saveOne": {
+    "message": "Save 1 place"
+  },
+  "saveMany": {
+    "message": "Save $COUNT$ places",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "selectedCount": {
+    "message": "$COUNT$ selected",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "retryN": {
+    "message": "Retry $COUNT$ failed",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "progressTitle": {
+    "message": "Saving to “$LIST$”",
+    "placeholders": {
+      "list": {
+        "content": "$1"
+      }
+    }
+  },
+  "progressDone": {
+    "message": "Saved to “$LIST$”",
+    "placeholders": {
+      "list": {
+        "content": "$1"
+      }
+    }
+  },
+  "resultSummary": {
+    "message": "$OK$ saved · $FAILED$ failed",
+    "placeholders": {
+      "ok": {
+        "content": "$1"
+      },
+      "failed": {
+        "content": "$2"
+      }
+    }
+  },
+  "noteRunning": {
+    "message": "It's normal for the Google Maps window to open and close briefly."
+  },
+  "noteFailed": {
+    "message": "Only the failed places can be retried."
+  },
+  "etaLessMinute": {
+    "message": "Under a minute left"
+  },
+  "etaMinutes": {
+    "message": "~$MIN$ min left",
+    "placeholders": {
+      "min": {
+        "content": "$1"
+      }
+    }
+  },
+  "openPlace": {
+    "message": "Open this place in Google Maps"
+  },
+  "cancelBtn": {
+    "message": "Stop"
+  },
+  "cancelling": {
+    "message": "Stopping…"
+  },
+  "stCanceled": {
+    "message": "Stopped"
+  },
+  "stoppedSummary": {
+    "message": "Stopped · $OK$ saved · $LEFT$ left",
+    "placeholders": {
+      "ok": {
+        "content": "$1"
+      },
+      "left": {
+        "content": "$2"
+      }
+    }
+  },
+  "resumeN": {
+    "message": "Continue with $COUNT$ left",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "onbTitle": {
+    "message": "Before you start"
+  },
+  "onb1": {
+    "message": "A Google Maps window opens and closes while saving. That is normal."
+  },
+  "onb2": {
+    "message": "Chrome shows a “debugging” banner while saving. TubeToMap uses it only to keep typing and notes working in the background."
+  },
+  "onb3": {
+    "message": "Each saved place gets a note with this video's title and link."
+  },
+  "onbOk": {
+    "message": "Got it"
+  },
+  "err_busy": {
+    "message": "Another task is in progress"
+  },
+  "err_bad_request": {
+    "message": "Invalid request"
+  },
+  "err_bad_name": {
+    "message": "Check the list name (1–40 characters)"
+  },
+  "err_list_exists": {
+    "message": "A list named “$LIST$” already exists. Use another name or pick the existing list.",
+    "placeholders": {
+      "list": {
+        "content": "$1"
+      }
+    }
+  },
+  "err_list_not_found_after_create": {
+    "message": "The list was created but isn't in your lists. Please check Google Maps."
+  },
+  "err_nothing_to_retry": {
+    "message": "No failed places to retry"
+  },
+  "err_page_open_timeout": {
+    "message": "The Google Maps page didn't open"
+  },
+  "err_page_no_response": {
+    "message": "The Google Maps page isn't responding"
+  },
+  "err_interrupted": {
+    "message": "The task was interrupted. Please try again."
+  },
+  "err_ui_save_button": {
+    "message": "Couldn't find the Save button on the place page"
+  },
+  "err_ui_save_menu": {
+    "message": "The save-to-list window didn't open (check that you're signed in)"
+  },
+  "err_ui_list_rows": {
+    "message": "Couldn't find your lists (check that you're signed in)"
+  },
+  "err_list_missing": {
+    "message": "Couldn't find the list “$LIST$”",
+    "placeholders": {
+      "list": {
+        "content": "$1"
+      }
+    }
+  },
+  "err_ui_new_list_button": {
+    "message": "Couldn't find the “New list” button"
+  },
+  "err_ui_title_input": {
+    "message": "Couldn't enter the list name"
+  },
+  "err_ui_title_saved": {
+    "message": "The list name was not saved. Check “Untitled list” in Google Maps."
+  },
+  "err_ui_note_box": {
+    "message": "Couldn't find the note field"
+  },
+  "err_note_unreadable": {
+    "message": "Couldn't read the existing note, so nothing was written"
+  },
+  "err_ui_note_commit": {
+    "message": "The note was not saved"
+  },
+  "err_ui_list_state": {
+    "message": "Couldn't read the state of “$LIST$”",
+    "placeholders": {
+      "list": {
+        "content": "$1"
+      }
+    }
+  },
+  "err_not_saved": {
+    "message": "The place wasn't added to the list"
+  },
+  "err_nothing_to_cancel": {
+    "message": "Nothing to stop"
+  },
+  "err_error": {
+    "message": "Something went wrong"
+  }
+}

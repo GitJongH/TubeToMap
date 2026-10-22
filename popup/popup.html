@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="popup.css">
+  <title>TubeToMap</title>
+</head>
+<body>
+  <header class="head">
+    <img class="logo" src="../icons/icon-48.png" alt="" width="40" height="40">
+    <h1><span id="titleText">TubeToMap</span><span id="dots" class="dots" aria-hidden="true" hidden><i>.</i><i class="d2">.</i><i class="d3">.</i></span></h1>
+  </header>
+
+  <p id="status" class="banner" role="status" hidden></p>
+  <button id="copyDiag" class="btn soft diag" type="button" hidden data-i18n="copyDiag">Copy diagnostics</button>
+
+  <section id="onboarding" class="card onboarding" hidden>
+    <p class="onb-title" data-i18n="onbTitle">Before you start</p>
+    <p class="onb-item" data-i18n="onb1">A Google Maps window opens and closes while saving. That is normal.</p>
+    <p class="onb-item" data-i18n="onb2">Chrome shows a “debugging” banner while saving. TubeToMap uses it only to keep typing and notes working in the background.</p>
+    <p class="onb-item" data-i18n="onb3">Each saved place gets a note with this video's title and link.</p>
+    <button id="onbOk" class="btn soft small" type="button" data-i18n="onbOk">Got it</button>
+  </section>
+
+  <main id="main" hidden>
+    <section class="card video-card">
+      <div class="thumb">
+        <img id="thumb" alt="">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+      </div>
+      <div class="video-meta">
+        <p id="video" class="video-title"></p>
+        <p id="videoSub" class="sub"></p>
+      </div>
+    </section>
+
+    <section id="listCard" class="card stack">
+      <label for="list" class="label" data-i18n="listLabel">List to save to</label>
+      <div class="row">
+        <select id="list"></select>
+        <button id="refresh" class="icon-btn" type="button" data-i18n-attr="title:refreshLists;aria-label:refreshLists" title="Reload lists" aria-label="Reload lists">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 4v5h-5"/></svg>
+        </button>
+      </div>
+      <div class="row">
+        <input id="newName" type="text" data-i18n-attr="placeholder:newListName;aria-label:newListName" placeholder="New list name" aria-label="New list name" maxlength="40">
+        <button id="create" class="btn soft" type="button" data-i18n="createBtn">Create</button>
+      </div>
+    </section>
+
+    <section id="progressCard" class="card stack" hidden>
+      <div class="pc-head">
+        <p id="pcTitle" class="pc-title"></p>
+        <p id="pcCount" class="pc-count"></p>
+      </div>
+      <div id="bar" class="bar" role="progressbar" data-i18n-attr="aria-label:progressLabel" aria-label="Save progress" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0">
+        <div id="barOk" class="bar-ok"></div>
+        <div id="barFail" class="bar-fail"></div>
+      </div>
+      <p id="pcEta" class="sub" hidden></p>
+      <p id="pcNote" class="sub" hidden></p>
+    </section>
+
+    <section class="card places-card">
+      <div id="placesHead" class="places-head">
+        <label class="check-all"><input id="all" type="checkbox" checked> <span data-i18n="selectAll">All places</span></label>
+        <span id="selCount" class="muted"></span>
+      </div>
+      <ul id="places"></ul>
+    </section>
+
+    <footer class="actions">
+      <button id="start" class="btn primary" type="button" data-i18n="selectPlaces">Select places</button>
+      <button id="cancel" class="btn ghost" type="button" hidden data-i18n="cancelBtn">Stop</button>
+      <button id="retry" class="btn warn" type="button" hidden data-i18n="retryDefault">Retry</button>
+      <button id="openList" class="btn ghost" type="button" data-i18n="openInMaps">Open in Google Maps ↗</button>
+    </footer>
+  </main>
+
+  <script src="../lib/parse.js"></script>
+  <script src="../lib/eta.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

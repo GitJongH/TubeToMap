@@ -1,0 +1,13 @@
+{
+  "name": "tubetomap",
+  "version": "0.1.0",
+  "description": "유튜브 영상 설명란의 지도 링크를 내 구글 지도 목록에 한 번에 저장하는 Chrome 확장 프로그램",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/parse.test.js test/ui.test.js test/eta.test.js test/i18n.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

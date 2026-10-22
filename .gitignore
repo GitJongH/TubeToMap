@@ -1,0 +1,16 @@
+# 의존성/빌드 산출물
+node_modules/
+*.zip
+*.crx
+*.pem
+
+# 편집기/OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 로컬 메모/임시 파일
+*.log
+*.local
+.env
