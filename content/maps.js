@@ -31,15 +31,19 @@
   const stripIcons = UI.stripIcons;
   const label = (el) => stripIcons(el.getAttribute('aria-label') || el.textContent || '');
   const findButton = (root, test) => [...root.querySelectorAll('button')].find((el) => test(label(el)));
+  // 저장 버튼은 저장된 장소면 이름표가 "<목록>에 저장됨"으로 바뀌므로(2026-11) 보이는 글자("저장"/"저장됨")를 우선 본다.
+  const shownText = (el) => stripIcons(el.textContent || '') || label(el);
 
   // 장소 패널의 저장 버튼: "경로" 버튼과 같은 버튼 줄 안에서 찾아 왼쪽 레일의 "저장됨"과 구분한다.
+  // 검색창 옆에도 "경로" 버튼이 있어서(2026-11) 모든 "경로" 버튼을 차례로 본다.
   function findSaveButton() {
-    const dir = findButton(document, (l) => UI.TEXT.directions.includes(l));
-    if (!dir) return null;
-    let c = dir.parentElement;
-    for (let i = 0; i < 6 && c; i++, c = c.parentElement) {
-      const b = findButton(c, UI.isSaveLabel);
-      if (b) return b;
+    const dirs = [...document.querySelectorAll('button')].filter((el) => UI.TEXT.directions.includes(label(el)));
+    for (const dir of dirs) {
+      let c = dir.parentElement;
+      for (let i = 0; i < 6 && c; i++, c = c.parentElement) {
+        const b = [...c.querySelectorAll('button')].find((el) => UI.isSaveLabel(shownText(el)));
+        if (b) return b;
+      }
     }
     return null;
   }
@@ -245,7 +249,7 @@
     // 장소 패널의 저장 버튼이 "저장됨"이면 이 장소는 어딘가에 저장되어 있다(독립된 두 번째 신호).
     const savedAnywhere = () => {
       const b = findSaveButton();
-      return b ? UI.isSavedLabel(label(b)) : null;
+      return b ? UI.isSavedLabel(shownText(b)) : null;
     };
 
     // 새로 연 창에서는 저장 창이 열린 뒤에도 체크 표시가 조금 늦게 채워질 수 있다. 일찍 "저장 안 됨"으로 읽으면
